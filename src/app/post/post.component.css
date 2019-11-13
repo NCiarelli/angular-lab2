@@ -15,6 +15,7 @@ button {
   padding: 5px;
   margin: 5px 0;
 }
+
 .fa-trash {
   position: absolute;
   right: 0;
@@ -24,4 +25,11 @@ button {
 
 button:hover {
 cursor: pointer;
+}
+
+.like-nums {
+  color:green;
+}
+.dislike-nums {
+  color:red;
 }

@@ -2,8 +2,8 @@
   <h1>{{post.title}}</h1>
   <p>{{post.thought}}</p>
   <button type="button" class="fas fa-trash" title="Delete Post" (click)="deletePost()"></button>
-  <!-- <button type="button" class="fas fa-thumbs-up"></button>
-  <span></span>
-  <button type="button" class="fas fa-thumbs-down"></button>
-  <span></span> -->
+  <button type="button" class="fas fa-thumbs-up" title="Like This!" (click)="upVote()"></button>
+  <span class="like-nums">{{post.likes}}</span>
+  <button type="button" class="fas fa-thumbs-down" title="Hate This!" (click)="downVote()"></button>
+  <span class="dislike-nums">{{post.dislikes}}</span>
 </article>

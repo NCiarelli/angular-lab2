@@ -11,7 +11,7 @@ export class PostFormComponent implements OnInit {
   @Output()
   submitted = new EventEmitter<Post>();
 
-  newPost: Post = { title: "", thought: "" };
+  newPost: Post = { title: "", thought: "", likes: 0, dislikes: 0 };
 
   constructor() { }
 

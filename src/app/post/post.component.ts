@@ -8,11 +8,8 @@ import { Post } from '../interfaces/post';
 })
 export class PostComponent implements OnInit {
 
-  @Input()
-  post: Post;
-
-  @Input()
-  index: number;
+  @Input() post: Post;
+  @Input() index: number;
 
   @Output()
   deleted = new EventEmitter<number>();
@@ -24,6 +21,14 @@ export class PostComponent implements OnInit {
 
   deletePost() {
     this.deleted.emit(this.index);
+  }
+
+  upVote() {
+    this.post.likes++;
+  }
+
+  downVote() {
+    this.post.dislikes++;
   }
 
 }
