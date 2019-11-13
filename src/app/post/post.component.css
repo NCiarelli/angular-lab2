@@ -1,0 +1,27 @@
+p,
+h1,
+article {
+  margin: 0;
+}
+
+article {
+  position: relative;
+  padding-right: 25px;
+}
+
+button {
+  border: none;
+  background: none;
+  padding: 5px;
+  margin: 5px 0;
+}
+.fa-trash {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+button:hover {
+cursor: pointer;
+}

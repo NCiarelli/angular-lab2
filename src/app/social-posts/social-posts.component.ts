@@ -15,9 +15,24 @@ export class SocialPostsComponent implements OnInit {
     { title: "TDD Needs More Use", thought: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident, voluptate vitae. Sapiente corporis praesentium dicta, fugit incidunt doloribus provident ea nulla magni quas eaque velit consectetur possimus, officia iusto libero." }
   ];
 
+  hideForm: boolean = true;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  addThought(): void {
+    this.hideForm = false;
+  }
+
+  onSubmit(gotNewPost): void {
+    this.posts.push(gotNewPost);
+    this.hideForm = true;
+
+  }
+
+  onDelete(indexToDelete): void {
+    this.posts.splice(indexToDelete, 1);
+  }
 }

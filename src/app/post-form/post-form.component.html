@@ -1,1 +1,9 @@
-<p>post-form works!</p>
+<section class="modal">
+  <form (ngSubmit)="submitPost()">
+    <label for="title-input">Title</label>
+    <input type="text" id="title-input" name="input1" [(ngModel)]="newPost.title" required>
+    <label for="thought-input">Thought</label>
+    <textarea name="input2" id="thought-input" [(ngModel)]="newPost.thought" cols="30" rows="10" required></textarea>
+    <button type="submit">Add Post</button>
+  </form>
+</section>
