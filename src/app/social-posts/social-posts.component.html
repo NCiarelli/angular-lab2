@@ -1,1 +1,6 @@
-<p>social-posts works!</p>
+<h1>My Thoughts</h1>
+<button>New Thought</button>
+<section>
+  <app-post *ngFor="let post of posts; index as i" [post]="post" [index]="i"></app-post>
+</section>
+<app-post-form></app-post-form>
