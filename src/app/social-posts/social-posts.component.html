@@ -1,6 +1,6 @@
 <h1>My Thoughts</h1>
 <button type="button" (click)="addThought()">New Thought</button>
 <section>
-  <app-post *ngFor="let post of posts; index as i" [post]="post" [index]="i" (deleted)=onDelete($event)></app-post>
+  <app-post *ngFor="let post of posts; index as i" [post]="post" (deleted)="onDelete(i)"></app-post>
 </section>
-<app-post-form *ngIf="!hideForm" (submitted)=onSubmit($event)></app-post-form>
+<app-post-form *ngIf="!hideForm" (submitted)="onSubmit($event)"></app-post-form>

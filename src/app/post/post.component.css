@@ -1,5 +1,5 @@
 p,
-h1,
+h2,
 article {
   margin: 0;
 }
@@ -12,11 +12,11 @@ article {
 button {
   border: none;
   background: none;
-  padding: 5px;
-  margin: 5px 0;
+  padding: 0;
+  margin: 0;
 }
 
-.fa-trash {
+.delete-button {
   position: absolute;
   right: 0;
   top: 50%;
@@ -32,4 +32,9 @@ cursor: pointer;
 }
 .dislike-nums {
   color:red;
+}
+
+i {
+  padding: 5px;
+  margin: 5px 0;
 }

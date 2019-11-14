@@ -1,9 +1,15 @@
 <article>
-  <h1>{{post.title}}</h1>
+  <h2>{{post.title}}</h2>
   <p>{{post.thought}}</p>
-  <button type="button" class="fas fa-trash" title="Delete Post" (click)="deletePost()"></button>
-  <button type="button" class="fas fa-thumbs-up" title="Like This!" (click)="upVote()"></button>
+  <button type="button" (click)="deletePost()" class="delete-button" aria-label="Delete this post">
+    <i aria-hidden="true" class="fas fa-trash" title="Delete Post"></i>
+  </button>
+  <button type="button" (click)="upVote()" aria-label="Upvote this post">
+    <i aria-hidden="true" class="fas fa-thumbs-up" title="Upvote This!"></i>
+  </button>
   <span class="like-nums">{{post.likes}}</span>
-  <button type="button" class="fas fa-thumbs-down" title="Hate This!" (click)="downVote()"></button>
+  <button type="button" (click)="downVote()" aria-label="Downvote this post">
+    <i aria-hidden="true" class="fas fa-thumbs-down" title="Downvote This!"></i>
+  </button>
   <span class="dislike-nums">{{post.dislikes}}</span>
 </article>

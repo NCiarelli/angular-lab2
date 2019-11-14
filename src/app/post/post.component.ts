@@ -9,25 +9,24 @@ import { Post } from '../interfaces/post';
 export class PostComponent implements OnInit {
 
   @Input() post: Post;
-  @Input() index: number;
 
   @Output()
-  deleted = new EventEmitter<number>();
+  deleted = new EventEmitter<void>();
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  deletePost() {
-    this.deleted.emit(this.index);
+  deletePost(): void {
+    this.deleted.emit();
   }
 
-  upVote() {
+  upVote(): void {
     this.post.likes++;
   }
 
-  downVote() {
+  downVote(): void {
     this.post.dislikes++;
   }
 
